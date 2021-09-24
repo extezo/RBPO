@@ -1,5 +1,6 @@
 #include "../headers/SomeHeader.h"
 int main(int argc, char *argv[]) {
+	system("chcp 1251");
 	int personCount = 0;
 	for (int i = 1; i < argc; i++)
 		if (strcmp(argv[i], "-person") == 0)
@@ -20,5 +21,6 @@ int main(int argc, char *argv[]) {
 		return 0;
 	}
 	PrintPersons(persons, personCount);
+	system("pause");
 	return 0;
 }
