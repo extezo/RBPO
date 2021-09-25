@@ -3,7 +3,7 @@ int main(int argc, char *argv[]) {
 	system("chcp 1251");
 	int personCount = 0;
 	for (int i = 1; i < argc; i++)
-		if (strcmp(argv[i], "-person") == 0)
+		if (CompareStrings(argv[i], "-person") == 0)
 			personCount++;
 	struct Person persons[personCount];
 	CreatePersons(argc, argv, persons, personCount);
