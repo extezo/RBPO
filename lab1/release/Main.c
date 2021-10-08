@@ -1,6 +1,5 @@
-#include "../headers/SomeHeader.h"
+#include "SomeHeader.h"
 int main(int argc, char *argv[]) {
-	system("chcp 1251");
 	int personCount = 0;
 	for (int i = 1; i < argc; i++)
 		if (CompareStrings(argv[i], "-person") == 0)
@@ -8,7 +7,7 @@ int main(int argc, char *argv[]) {
 	struct Person persons[personCount];
 	CreatePersons(argc, argv, persons, personCount);
 	printf("%s\n",
-			"Сортировать список по возрастанию (1) или по убыванию (0)?");
+			"Sort list ascending (1) or descending (0)?");
 	fflush(NULL);
 	char ans[100];
 	scanf_s("%s", ans);
@@ -17,7 +16,7 @@ int main(int argc, char *argv[]) {
 	else if (CompareStrings(ans, "0") == 0)
 		Sort(persons, personCount, Desc);
 	else {
-		printf("%s\n%s\n", "Некорректный ввод", "Выход из программы");
+		printf("%s\n%s\n", "Incorrect input", "Exiting...");
 		return 0;
 	}
 	PrintPersons(persons, personCount);

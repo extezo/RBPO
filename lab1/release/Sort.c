@@ -1,4 +1,4 @@
-#include "../headers/SomeHeader.h"
+#include "SomeHeader.h"
 void Sort(struct Person *persons, int count, enum SortType sortType) {
 	for (int min = 0; min < count - 1; min++) {
 		int least = min;

@@ -1,5 +1,4 @@
-#include "../headers/SomeHeader.h"
-
+#include "SomeHeader.h"
 int CompareStrings(const char *lhs, const char *rhs) {
 	int l_size = strlen(lhs);
 	int r_size = strlen(rhs);
@@ -12,5 +11,5 @@ int CompareStrings(const char *lhs, const char *rhs) {
 		return -1;
 	else if (l_size > r_size)
 		return 1;
-	else return 0;
+	return 0;
 }
