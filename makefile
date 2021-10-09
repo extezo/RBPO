@@ -9,13 +9,8 @@ LIB_OBJECTS=$(LIB_SOURCES:.c=.o)
 
 DEPS=SomeHeader.h
 
-CLEANUP=$(MAIN_OBJECTS) $(LIB_OBJECTS) $(LIB)
-comma=,
-empty=
-space=$(empty) $(empty)
-
-
 all: app 
+	
 app: $(LIB) $(MAIN_OBJECTS)
 	$(CC) -lm -o $@ $(MAIN_OBJECTS) $<
 funcs.a: $(LIB_OBJECTS) 
@@ -23,4 +18,4 @@ funcs.a: $(LIB_OBJECTS)
 libs: $(LIB) 
 
 clean:
-	del /f $(subst $(space),$(comma), $(strip $(CLEANUP))), 
+	del *.o, *.a
