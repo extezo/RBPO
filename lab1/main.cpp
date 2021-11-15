@@ -28,7 +28,7 @@ void ReadPersonSalary(double* salary) {
     cin >> *salary;
 }
 
-void ReadPersonData(string &name, unsigned short age, string &salary) {
+void ReadPersonData(string &name, unsigned short &age, string &salary) {
     name = ReadPersonName();
     age = ReadPersonAge();
     double doubleSalary;
@@ -36,7 +36,7 @@ void ReadPersonData(string &name, unsigned short age, string &salary) {
     salary = to_string(doubleSalary);
 }
 
-void ReadPersonData(string &name, unsigned short age, string &height, string &weight) {
+void ReadPersonData(string &name, unsigned short &age, string &height, string &weight) {
     name = ReadPersonName();
     age = ReadPersonAge();
     ReadPersonHeight();
@@ -47,7 +47,7 @@ void ReadPersonData(string &name, unsigned short age, string &height, string &we
 }
 
 void WritePersonData (unsigned short age, string &name, const string &height = "", const string &weight = "", const string &salary = "") {
-    cout << name << endl << age << endl << height << endl << weight << endl << salary << endl;
+    cout << name << endl << to_string(age) << endl << height << endl << weight << endl << salary << endl;
 }
 
 int main() {
