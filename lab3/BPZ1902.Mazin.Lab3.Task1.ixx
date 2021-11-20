@@ -1,7 +1,7 @@
 module;
 #include <cmath>
 export module BPZ1902.Mazin.Lab3.Task1;
-namespace RBPO::Lab3::Task3 {
+namespace RBPO::Lab3::Task1 {
 	export inline double f1(double x) {
 		return (1 - sin(x) * sin(x)) / (1 + sin(2 * x));
 	}
@@ -13,7 +13,7 @@ namespace RBPO::Lab3::Task3 {
 	}
 	export double f3(unsigned int n) {
 		double result = 0;
-		for (unsigned int i = 0; i < n; i++)
+		for (unsigned int i = 0; i <= n; i++)
 			result += a(i);
 		return result;
 	}
