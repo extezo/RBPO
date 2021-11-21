@@ -5,8 +5,9 @@ namespace RBPO::Lab3::Task3 {
 	double f3(unsigned int n) {
 		double result = 0;
 		unsigned int i = 0;
-		while (i <= n)
+		do 
 			result += a(i++);
+		while (i <= n);
 		return result;
 	}
 }
